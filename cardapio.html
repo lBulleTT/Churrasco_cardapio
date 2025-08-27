@@ -1,0 +1,87 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio - Churrasco do Rogério</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="CSS/cardapio-style.css">
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/C5Z0w4h1/Design-sem-nome-3-removebg-preview.png" alt="Logo Churrasco do Rogério" class="header-logo">
+    <h1>Cardápio</h1>
+  </header>
+
+  <main id="menu"></main>
+  <div class="cart">
+    <h2>🛒 Carrinho de Compras</h2>
+    <ul id="cart-items"></ul>
+
+    <label for="pagamento">Forma de pagamento:</label>
+    <select id="pagamento">
+      <option value="Pix">Pix</option>
+      <option value="Cartão">Cartão</option>
+      <option value="Dinheiro">Dinheiro</option>
+    </select>
+
+    <div id="trocoDiv" style="display: none;">
+      <p>
+      <label for="troco">Troco para quanto?</label>
+      <input type="number" id="troco" placeholder="Ex: 50" style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;"> 
+    </div>
+
+    <p><label for="tipoServico">Tipo de serviço:</label>
+    <select id="tipoServico" style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+      <option value="entrega">🚚 Entrega</option>
+      <option value="local">🍽️ Comer no restaurante</option>
+    </select>
+
+    <div id="camposEntrega">
+      <label for="nomeCliente">Seu nome:</label>
+      <input type="text" id="nomeCliente" placeholder="Digite seu nome" required style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+
+      <label for="enderecoCliente">Endereço para entrega:</label>
+      <input type="text" id="enderecoCliente" placeholder="Rua, número e bairro" required style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc;">
+
+    </div>
+
+    <div id="camposLocal" style="display: none;">
+      <label for="nomeClienteLocal">Seu nome:</label>
+      <input type="text" id="nomeClienteLocal" placeholder="Digite seu nome" style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+
+      <label for="numeroMesa">Número da mesa:</label>
+      <input type="number" id="numeroMesa" placeholder="Ex: 5" min="1" max="50" style="padding: 6px; margin-bottom: 10px; display: block; width: 100%; max-width: 150px; border-radius: 5px; border: 1px solid #ccc;">
+    </div>
+
+    <p><label for="observacoes">Observações do pedido (opcional):</label>
+    <textarea id="observacoes" placeholder="Ex: Ponto da carne, etc." style="padding: 8px; margin-bottom: 10px; display: block; width: 100%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc; min-height: 60px; resize: vertical;"></textarea>
+
+    <p><strong>Taxa de Entrega:</strong> <span id="taxaEntregaValor">R$ 0,00</span></p>
+
+    <div class="form-group">
+        <button onclick="calcularTaxaEntrega(document.getElementById('enderecoCliente').value)" class="btn animado">Calcular Taxa de Entrega</button>
+      </div>
+
+
+    <p class="total-destaque"><strong>Total:</strong> <span id="cart-total">R$ 0,00</span></p>
+
+
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+    <button onclick="copiarPedido()" style="background: #27ae60; color: white; padding: 10px; border-radius: 5px; margin-top: 10px;">📋 Copiar Pedido</button>
+
+  </div>
+  <div class="section contact">
+    <h2>Contato & Localização</h2>
+    <p><strong>Endereço:</strong> Rua Tibagi, nº 1179, Bangu - Rio de Janeiro / RJ</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5521969405521" target="_blank">Clique aqui para falar conosco</a></p>
+    <p><strong>Horário:</strong> Terça a Sábado das 19:30 às 23:30</p>
+    <p><strong>Localização:</strong> <a href="https://maps.app.goo.gl/f7pRFjDTf7V3MLLg7" target="_blank">Ver no Google Maps</a></p>
+  </div>
+
+  <script src="JS/cardapio-script.js"></script>
+
+  <button onclick="toggleModoNoturno()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background: #333; color: #fff; border-radius: 8px; border: none;">🌙 Modo Noturno</button>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_CW0_VbxGw_eBtZJs7s7PAd5al2wOcY&libraries=places"></script>
+</body>
+</html>
