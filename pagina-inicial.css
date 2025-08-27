@@ -1,0 +1,114 @@
+/* --- ESTILOS GLOBAIS E DO CORPO PARA A LANDING PAGE --- */
+body.landing-page {
+    font-family: 'Montserrat', sans-serif;
+    /* Cor de fundo idêntica à do corpo principal do cardápio para harmonia. */
+    background-color: #fff8f0; 
+    
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da viewport. */
+    margin: 0; /* Remove margem padrão do body. */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho, importante para o layout. */
+}
+
+/* Adaptação do fundo para mobile */
+@media (max-width: 768px) {
+    body.landing-page {
+        /* Descomentado: background-attachment definido como 'scroll' para melhor performance em dispositivos móveis. */
+        background-attachment: scroll; 
+        /* background-size: cover; */ /* Esta linha já está definida acima no estilo geral, não precisa repetir aqui. */
+    }
+}
+
+/* Animação de entrada para o conteúdo principal */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.landing-content-wrapper {
+    /* background-color: rgba(0, 0, 0, 0.7); */ /* REMOVIDO */
+    padding: 0; /* AJUSTADO PARA 0 */
+    /* border-radius: 20px; */ /* REMOVIDO */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */ /* REMOVIDO */
+    animation: fadeInScale 1s ease-out;
+    /* color: #fff; */ /* REMOVIDO */
+    text-align: center;
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); */ /* REMOVIDO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-display-box {
+    /* background-color: #fff; 
+    /* border-radius: 15px; */
+    padding: 0; /* AJUSTADO PARA 0 */
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); */
+    margin-bottom: 30px;
+    display: inline-block;
+    /* transform: translateY(0); */ 
+    /* transition: transform 0.3s ease; */ 
+}
+/* .logo-display-box:hover { */ 
+/* transform: translateY(-5px); */ 
+/* } */
+
+/* --- ESTILOS PARA A IMAGEM DO LOGO --- */
+.main-logo-image {
+    max-width: 750px;
+    height: auto;     /* Mantém a proporção da imagem */
+    display: block;   /* Garante que ocupe sua própria linha e centralize */
+    margin: 0 auto;   /* Centraliza a imagem dentro do seu contêiner */
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3));  /* Sombra para o próprio logo */
+}
+
+@media (max-width: 768px) {
+    .main-logo-image {
+        max-width: 500px; /* Tamanho do logo no mobile */
+    }
+}
+
+/* --- ESTILOS PARA O BOTÃO --- */
+.access-menu-button {
+    background: linear-gradient(135deg, #c0392b, #8e2e1a); /* Cores dos botões do seu cardápio */
+    color: #fff;
+    padding: 10px 30px; /* Padding maior para um botão mais robusto */
+    font-size: 1em; /* Fonte maior para o botão */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px; /* Arredondamento maior */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Sombra mais forte para o botão */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.access-menu-button:hover {
+    background: linear-gradient(135deg, #a93226, #782618);
+    transform: scale(1.20);/*Aumenta o efeito de animação do botão!*/
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .landing-content-wrapper {
+        padding: 0; /* AJUSTADO PARA 0 */
+        /* border-radius: 15px; */ /* REMOVIDO */
+    }
+
+    .logo-display-box {
+        padding: 0; /* AJUSTADO PARA 0 */
+        margin-bottom: 25px;
+    }
+
+    .main-logo-image {
+        max-width: 200px;
+    }
+
+    .access-menu-button {
+        font-size: 0.7em;
+        padding: 10px 22px;
+    }
+}
