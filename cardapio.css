@@ -1,0 +1,306 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff8f0;
+  color: #3a2c1b;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s ease-in;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header img {
+  width: 65%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Cabeçalho "churrasco do rogerio" */ 
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #1a0b0b;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-left: 10px solid #e74c3c;
+  padding-left: 10px;
+  color: #8e2e1a;
+  margin-top: 40px;
+  background-color: #fde5d0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+h2:hover {
+  background-color: #f8d3b0;
+}
+
+.section {
+  margin-bottom: 40px;
+  animation: slideUp 0.7s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+table:hover {
+  transform: scale(1.01);
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #dcbfa4;
+  text-align: left;
+  background-color: #fffaf3;
+  transition: background-color 0.3s ease;
+}
+tr:hover td {
+  background-color: #fbe7d3;
+}
+th {
+  background-color: #f3d9c0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.img-banner {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.cart {
+  background: #fdf2e9;
+  padding: 20px;
+  border: 1px solid #f5cba7;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.cart button,
+button.add,
+button.remove {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cart button {
+  margin-top: 5px;
+  padding: 6px 12px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cart button:hover {
+  background: #a93226;
+  transform: scale(1.07);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+button.add {
+  padding: 6px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button.add:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 8px rgba(39, 174, 96, 0.5);
+}
+
+button.remove {
+  padding: 6px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button.remove:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(192, 57, 43, 0.5);
+}
+
+button.remove:hover {
+  background: #b84300;
+}
+
+body.modo-noturno {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+body.modo-noturno table,
+body.modo-noturno th,
+body.modo-noturno td {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+body.modo-noturno .cart {
+  background-color: #333;
+  border-color: #666;
+}
+body.modo-noturno button {
+  background-color: #555;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+body.modo-noturno button:hover {
+  background-color: #777;
+  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
+}
+
+.resultado-texto {
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fdebd0;
+  color: #884c1e;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+body.modo-noturno .resultado-texto {
+  background-color: #2f2f2f;
+  color: #f5f5f5;
+}
+
+.em-falta {
+  background-color: #f8f8f8;
+  opacity: 0.6;
+}
+
+.em-falta td {
+  color: #999;
+}
+
+.indisponivel {
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.quantidade-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .quantidade-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  button.add, button.remove {
+    padding: 4px 8px;
+    font-size: 0.75em;
+    min-width: 30px;
+  }
+  .contador-quantidade {
+    font-size: 0.75em;
+    padding: 4px 8px;
+    min-width: 20px;
+  }
+}
+
+.section.contact {
+  color: #1a0b0b;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.section.contact a {
+  color: #ff4444;
+  text-decoration: underline;
+}
+
+body.modo-noturno .section.contact {
+  color: #f0f0f0;
+}
+
+body.modo-noturno .section.contact a {
+  color: #ffd9b3;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.total-destaque {
+  font-size: 1.6em;
+  font-weight: bold;
+  background-color: #fdebd0;
+  color: #c0392b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-top: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.total-destaque:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+body.modo-noturno .total-destaque {
+  background-color: #fdebd0;
+  color: #c0392b;
+}
