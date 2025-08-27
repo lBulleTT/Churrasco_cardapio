@@ -11,7 +11,7 @@ const observacoesTextarea = document.getElementById('observacoes');
 
 // --- URL da sua planilha Google Sheets publicada como CSV ---
 
-const GOOGLE_SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ11A1vCzx45r2RdjY_KFN5S5itwzWOqWLq7jQygO_SL0HCSNqO8uZvBjLAGMJnDvW73DnfNyRPzWiD/pub?output=csv';
+const GOOGLE_SHEETS_CSV_URL = '';
 
 // Armazenará os produtos lidos da planilha
 let produtos = [];
