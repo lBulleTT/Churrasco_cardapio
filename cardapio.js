@@ -306,7 +306,7 @@ async function calcularTaxaEntrega(endereco) {
         const latChurrascaria = -22.890104878846042;
         const lonChurrascaria = -43.47785352523603;
 
-        const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(endereco)}&key=AIzaSyAS_CW0_VbxGw_eBtZJs7s7PAd5al2wOcY`;
+        const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(endereco)}chave_api`;
         console.log('🌐 URL da API:', apiUrl);
 
         const response = await fetch(apiUrl);
